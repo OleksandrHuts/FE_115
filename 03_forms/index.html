@@ -4,10 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <form action="#"></form>
+        <h2>Search form:</h2>
+        <form action="https://www.google.com/search" target="_blank">
+            <input type="text" name="q">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div class="container">
+        <h2>PIZZA HUT</h2>
+        <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="GET" id="main-form" enctype="multipart/form-data">
+            <input type="hidden" name="hidden-field" value="9idn3j">
+
+            <fieldset>
+                <legend>User data</legend>
+                <!-- TEXT inputs -->
+                <label for="client-name">Client name:</label>
+                <input type="text" name="client-name" id="client-name" value="Alex" maxlength="10" required>
+
+            </fieldset>
+
+            <label for="client-phone">Client phone:</label>
+            <input type="tel" name="client-phone" id="client-phone" value="066--xx--xx-xxx">
+
+            <label for="client-email">Client email:</label>
+            <input type="email" name="client-email" id="client-email" value="">
+
+            <label for="client-date">When we should deliver your order:</label>
+            <input type="date" name="client-date" id="client-date" value="">
+
+            <label for="client-quntity">How much do you need?:</label>
+            <input type="number" name="client-quntity" id="client-quntity" value="" max="10" min="2">
+
+            <label for="client-password">Ented your password:</label>
+            <input type="password" name="client-password" id="client-password" value="" max="10" min="2">
+
+            <label for="client-range">Ented your age range:</label>
+            <input type="range" name="client-range" id="client-range" value="" max="10" min="2">
+
+            <!-- CHECKBOX/RADIO -->
+            <h2>Choose your drink:</h2>
+            <label for="client-drink-beer">Beer:</label>
+            <input type="checkbox" name="client-drink" id="client-drink-beer" value="beer" checked>
+
+            <label for="client-drink-cola">Cola:</label>
+            <input type="checkbox" name="client-drink" id="client-drink-cola" value="cola">
+
+            <label for="client-drink-water">Water:</label>
+            <input type="checkbox" name="client-drink" id="client-drink-water" value="water">
+
+            <h2>Payment type:</h2>
+            <label for="client-payment-cash">Cash:</label>
+            <input type="radio" name="client-payment" id="client-payment-cash" value="cash" checked>
+
+            <label for="client-payment-card">Card:</label>
+            <input type="radio" name="client-payment" id="client-payment-card" value="card">
+
+            <!-- SELECT -->
+            <label for="pizza-type">Pizza:</label>
+            <select name="pizza-type" id="pizza-type">
+                <option value="1">Cheese</option>
+                <option value="2" hidden disabled>Pineapple</option>
+                <option value="3">Meat</option>
+                <option value="4">Onion plus</option>
+                <option value="5">Chicken</option>
+                <option value="6">with olives</option>
+                <option value="7" selected>Fruit</option>
+                <option value="8">Salami</option>
+            </select>
+
+            <!-- TEXTAREA -->
+            <textarea name="user-comment" id="user-comment" cols="30" rows="10" placeholder="Add your comment">
+                Some text
+            </textarea>
+
+            <!-- SUBMIT -->
+            <!-- <input type="submit" value="Place your order"> -->
+            <button type="submit" id="submit">
+                <img 
+                    width="25" 
+                    src="https://w1.pngwing.com/pngs/529/307/png-transparent-pizza-pepperoni-pizza-pizza-delivery-food-logo-fast-food-black-black-and-white.png"
+                    alt="">
+                Place your order
+            </button>
+            <input type="reset" id="reset" value="reset form">
+
+            <!-- FILE -->
+            <label for="user-file">Add file:</label>
+            <input type="file" name="user-file" id="user-file">
+        </form>
+
+        <h2>Input out of FORM</h2>
+        <input type="text" name="out-input" id="out-input" form="main-form">
     </div>
 </body>
 </html>
