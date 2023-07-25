@@ -40,7 +40,7 @@
             <input type="number" name="client-quntity" id="client-quntity" value="" max="10" min="2">
 
             <label for="client-password">Ented your password:</label>
-            <input type="password" name="client-password" id="client-password" value="" max="10" min="2">
+            <input type="password" name="client-password" id="client-password" value="" maxlength="10" minlength="2">
 
             <label for="client-range">Ented your age range:</label>
             <input type="range" name="client-range" id="client-range" value="" max="10" min="2">
@@ -66,13 +66,14 @@
             <!-- SELECT -->
             <label for="pizza-type">Pizza:</label>
             <select name="pizza-type" id="pizza-type">
+                <option value="">Choose your pizza</option>
                 <option value="1">Cheese</option>
                 <option value="2" hidden disabled>Pineapple</option>
                 <option value="3">Meat</option>
                 <option value="4">Onion plus</option>
                 <option value="5">Chicken</option>
                 <option value="6">with olives</option>
-                <option value="7" selected>Fruit</option>
+                <option value="7" >Fruit</option>
                 <option value="8">Salami</option>
             </select>
 

@@ -1,0 +1,146 @@
+.page_wrapper {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 970px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.site_heading {
+    font-weight: bold;
+    font-size: 34px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.site_sub_heading {
+    text-align: center;
+}
+
+.nav_item {
+    display: inline-block;
+}
+
+.nav_list {
+    font-size: 0;
+    text-align: center;
+}
+
+.nav_link.active {
+    color: #000;
+}
+
+.nav_link {
+    text-transform: capitalize;
+    color: #828282;
+
+    font-size: 18px;
+    font-weight: 400;
+    padding: 25px 20px;
+    display: inline-block;
+}
+
+.main_nav {
+    border-bottom: 1px solid #828282;
+}
+
+.main_screen {
+    margin-top: 12px;
+}
+
+.site_name {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.about {
+    background-color: #f6f6f6;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about_content {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.about_content p {
+    margin-bottom: 30px;
+}
+
+.skills {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.skill_item {
+    text-align: center;
+    width: 170px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 96px;
+}
+
+.skills_list {
+    font-size: 0;
+}
+
+.skill_item:last-child {
+    margin-right: 0;
+}
+
+.skill_img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+}
+
+.skills_content {
+    margin-top: 50px;
+}
+
+.skill_item_name {
+    font-weight: bold;
+    font-size: 14px;
+    color: #828282;
+    width: 90px;
+    margin: 0 auto;
+    min-height: 40px;
+}
+
+.rating {
+    margin-top: 60px;
+    width: 100%;
+    font-size: 0;
+}
+
+.rating_item {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-image: url('../img/star-grey.svg');
+    background-position: center;
+    margin-right: 10px;
+}
+
+.rating_item:last-child{
+    margin-right: 0;
+}
+
+.rating_item.active {
+    background-image: url('../img/star.svg');
+}
