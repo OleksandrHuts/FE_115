@@ -105,7 +105,11 @@ label::before {
     transition: all .5s ease;
 }
 
-input[type='checkbox']:checked + label .content-wrapper::before {
+input[type='checkbox']:checked + label {
+    background-color: pink;
+}
+
+input[type='checkbox']:checked + label::before {
     background-image: url('https://static-00.iconduck.com/assets.00/checkmark-icon-512x426-8re0u9li.png');
     background-position: center;
     background-repeat: no-repeat;
