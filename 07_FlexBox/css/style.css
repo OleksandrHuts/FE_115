@@ -50,13 +50,13 @@
     text-align: center;
 }
 
-.button {
+/* .button {
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
     border: 1px solid #847d7d;
     display: inline-block;
     text-transform: uppercase;
-}
+} */
 
 .box {
     background-color: pink;

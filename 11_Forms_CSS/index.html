@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <form action="#">
+        <div class="form_group">
+            <input type="text" name="name" id="name" placeholder=" " required>
+            <label for="name">
+                First name
+            </label>
+        </div>
+        <div class="form_group">
+            <input type="text" name="lname" id="lname" placeholder=" " required>
+            <label for="lname">
+                last name
+            </label>
+        </div>
+
+        <div class="form_group">
+            <button class="change_view" id="change_view"></button>
+            <input type="password" name="password" id="password" placeholder=" ">
+            <label for="password">
+                password
+            </label>
+        </div>
+
+        <div class="form_group">
+            <select name="select" id="select">
+                <option value="" disabled selected>Choose option</option>
+                <option value="1">Item 1</option>
+            </select>
+        </div>
+
+        <div class="form_group">
+            <input type="file" name="file" id="file" required>
+            <label for="file" class="fake-file">
+                <span class="default">Add image</span>
+                <span class="success">File added</span>
+            </label>
+        </div>
+
+        <button>Send</button>
+    </form>
+</body>
+</html>
