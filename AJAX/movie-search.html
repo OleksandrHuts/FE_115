@@ -15,16 +15,17 @@
             <h1 class="text-success text-center m-3">
                 Search Movies
             </h1>
-            <div class="m-5">
+            <form class="m-5">
                 <div class="input-group mb-2">
                     <input 
                         type="text" 
                         class="form-control searchText" 
                         placeholder="Enter the name of the movie" 
                         id="searchText"
+                        onchange="searchFilms()"
                         value="garfield"
                         >
-                    <button class="btn btn-outline-primary" type="button" id="btn_search" onclick="searchMovie()">
+                    <button class="btn btn-outline-primary" type="button" id="btn_search" onclick="searchFilms()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                         </svg>
@@ -40,18 +41,23 @@
                     <input type="radio" class="btn-check" name="type" id="episode" autocomplete="off">
                     <label class="btn btn-outline-primary" for="episode">Episode</label>
                 </div>
-            </div>
+            </form>
             <h2 class="text-danger text-center m-3 d-none" id="messageError">
                 Movie not found!
             </h2>
-            <div class="list-group m-5" id="list"></ul>
-            <nav class="m-5 " id="nav">
+            <h2 class="text-danger text-center m-3">
+                Watch later
+            </h2>
+            <ul class="list-group m-5" id="watchlist">
+            </ul>
+            <ul class="list-group m-5" id="list"></ul>
+            <nav class="m-5 d-none" id="nav">
                 <ul class="pagination justify-content-center">
                     <li class="page-item"><a class="page-link" href="first">First</a></li>
                     <li class="page-item"><a class="page-link" href="prev">Prev</a></li>
                     <li class="page-item"><a class="page-link" href="page" id="page"></a></li>
-                    <li class="page-item"><a class="page-link" href="next" onclick="nextPage(event)">Next</a></li>
-                    <li class="page-item"><a class="page-link" href="last" onclick="goToEnd(event)">Last</a></li>
+                    <li class="page-item"><a class="page-link" href="next">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="last">Last</a></li>
                 </ul>
             </nav>
             <div class="m-5 d-none" id="#card_block"></div>
@@ -59,7 +65,7 @@
     </main>
     
     <!-- cdn axios -->
-    <script src="./js/axios.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
     <!-- main js -->
     <script src="./js/app.js"></script>
 </body>
