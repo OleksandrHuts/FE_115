@@ -26,3 +26,12 @@ body {
 .slick-prev {
     left: -45px;
 }
+
+.slider_custom {
+    width: 100%;
+    height: 100vh;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}

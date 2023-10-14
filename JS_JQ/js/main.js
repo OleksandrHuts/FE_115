@@ -3,7 +3,9 @@ $(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
+        vertical: true,
         dots: true,
+        arrows: false,
         responsive: [
             {
                 breakpoint: 1024,
