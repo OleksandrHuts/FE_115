@@ -1,11 +1,10 @@
 $(function(){
-    $('.slider_custom').slick({
+    $('.news-list').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
-        vertical: true,
         dots: true,
-        arrows: false,
+        arrows: true,
         responsive: [
             {
                 breakpoint: 1024,

